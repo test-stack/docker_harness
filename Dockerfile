@@ -5,6 +5,7 @@ MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
 
 ENV HARNESS_VERSION 0.2.1
 ENV COFFEESCRIPT_VERSION 1.9.3
+ENV CHAI_VERSION 3.2.0
 ENV WORKSPACE /home/harness/
 
 RUN sudo apt-get update && \
@@ -14,4 +15,6 @@ RUN sudo apt-get update && \
 RUN npm i coffee-script@$COFFEESCRIPT_VERSION -g && \
     ln -s /usr/local/bin/coffee /usr/bin/coffee && \
     npm i test-stack-harness@$HARNESS_VERSION -g && \
-    ln -s /usr/local/bin/coffee /usr/bin/coffee
+    ln -s /usr/local/bin/coffee /usr/bin/coffee && \
+    npm i chai@$CHAI_VERSION -g && \
+    ln -s /usr/local/bin/chai /usr/bin/chai
