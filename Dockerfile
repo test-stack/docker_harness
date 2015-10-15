@@ -1,14 +1,13 @@
-# VERSION 1.0
+# VERSION 1.1
 
 FROM rdpanek/base:2.0
 MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
 
-ENV HARNESS_VERSION 0.2.1
+ENV HARNESS_VERSION 0.2.2
 ENV COFFEESCRIPT_VERSION 1.9.3
-ENV CHAI_VERSION 3.2.0
 ENV WORKSPACE /home/harness/
 
-# Install node & npm
+# Install node & npm
 RUN apt-get update -yq && apt-get upgrade -yq && \
 
     # install from nodesource using apt-get
@@ -23,5 +22,4 @@ RUN apt-get update -yq && apt-get upgrade -yq && \
 
     # Install harness
     npm i coffee-script@$COFFEESCRIPT_VERSION -g && \
-    npm i test-stack-harness@$HARNESS_VERSION -g && \
-    npm i chai@$CHAI_VERSION -g
+    npm i test-stack-harness@$HARNESS_VERSION -g

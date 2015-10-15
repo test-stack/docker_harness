@@ -2,11 +2,10 @@
 > More information in [Docker repository](https://hub.docker.com/r/rdpanek/docker_harness/)
 
 Contains:
-- node v0.10.25
-- npm 1.3.10
+- node v0.10.40
+- npm 3.3:6
 - coffeescript 1.9.3
-- harness 0.2.1
-- chaijs 3.2.0
+- harness 0.2.2
 
 ## Run Docker container
 via Makefile
