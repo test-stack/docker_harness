@@ -1,4 +1,4 @@
-# VERSION 1.3
+# VERSION 1.4
 
 FROM rdpanek/base:2.0
 MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
@@ -6,7 +6,7 @@ MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
 ENV NODEJS_VERSION v4.2.1
 ENV NODEJS_APP node-${NODEJS_VERSION}-linux-x64
 ENV INSTALL_DIR /opt/
-ENV HARNESS_VERSION 0.2.2
+ENV HARNESS_VERSION 0.2.3
 ENV COFFEESCRIPT_VERSION 1.9.3
 ENV WORKSPACE /home/harness/
 
@@ -25,4 +25,5 @@ RUN apt-get update -yq && apt-get upgrade -yq && \
     npm i coffee-script@$COFFEESCRIPT_VERSION -g && \
     npm i test-stack-harness@$HARNESS_VERSION -g && \
     sudo ln -s $INSTALL_DIR${NODEJS_APP}/bin/coffee /usr/bin/coffee && \
-    sudo ln -s $INSTALL_DIR${NODEJS_APP}/bin/harness /usr/bin/harness
+    sudo ln -s $INSTALL_DIR${NODEJS_APP}/bin/harness /usr/bin/harness && \
+    coffee -v
