@@ -1,4 +1,4 @@
-# VERSION 1.2
+# VERSION 1.3
 
 FROM rdpanek/base:2.0
 MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
@@ -23,4 +23,6 @@ RUN apt-get update -yq && apt-get upgrade -yq && \
 
     # Install harness and dependencies
     npm i coffee-script@$COFFEESCRIPT_VERSION -g && \
-    npm i test-stack-harness@$HARNESS_VERSION -g
+    npm i test-stack-harness@$HARNESS_VERSION -g && \
+    sudo ln -s $INSTALL_DIR${NODEJS_APP}/bin/coffee /usr/bin/coffee && \
+    sudo ln -s $INSTALL_DIR${NODEJS_APP}/bin/harness /usr/bin/harness
