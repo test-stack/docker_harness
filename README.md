@@ -2,10 +2,10 @@
 > More information in [Docker repository](https://hub.docker.com/r/rdpanek/docker_harness/)
 
 Contains:
-- node v0.10.40
-- npm 3.3:6
-- coffeescript 1.9.3
-- harness 0.2.2
+- node v4.2.1
+- npm 2.14.7
+- coffee-script 1.9.3
+- harness 0.2.3
 
 ## Run Docker container
 via Makefile
@@ -25,5 +25,5 @@ cd /home/harness
 
 run test
 ```
-harness someTag -t 25000 -R elastic
+harness someTag -t 25000 -c dockerChrome -R elastic
 ```

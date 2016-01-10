@@ -4,7 +4,7 @@
 
 
 NAME=rdpanek/harness
-VERSION=1.0
+VERSION=1.4
 WORKSPACE=$(filter-out $@,$(MAKECMDGOALS))
 
 
@@ -13,9 +13,6 @@ default:
 
 build:
 	docker build -t $(NAME):$(VERSION) .
-
-run:
-	docker run -it --name harness -v $(WORKSPACE):/home/harness $(NAME):$(VERSION)
 
 tag:
 	git tag -d $(VERSION) 2>&1 > /dev/null
