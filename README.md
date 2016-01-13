@@ -5,7 +5,7 @@ Contains:
 - node v4.2.1
 - npm 2.14.7
 - coffee-script 1.9.3
-- harness 0.2.3
+- harness 0.2.4
 
 ## Run Docker container
 via Makefile
