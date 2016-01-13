@@ -23,7 +23,17 @@ in docker
 cd /home/harness
 ```
 
+create `config.cson` with
+```
+EXPLICIT_WAIT_MS: 30000
+```
+
+install dependencies
+```
+npm install
+```
+
 run test
 ```
-harness someTag -t 25000 -c dockerChrome -R elastic
+harness someTag -t 25000 -c dockerChrome -b -R elastic
 ```
