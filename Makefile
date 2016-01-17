@@ -4,7 +4,7 @@
 
 
 NAME=rdpanek/harness
-VERSION=1.4
+VERSION=1.6
 WORKSPACE=$(filter-out $@,$(MAKECMDGOALS))
 
 

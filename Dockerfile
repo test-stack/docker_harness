@@ -1,4 +1,4 @@
-# VERSION 1.4
+# VERSION 1.6
 
 FROM rdpanek/base:2.0
 MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
@@ -6,7 +6,7 @@ MAINTAINER Radim Daniel Pánek <rdpanek@gmail.com>
 ENV NODEJS_VERSION v4.2.1
 ENV NODEJS_APP node-${NODEJS_VERSION}-linux-x64
 ENV INSTALL_DIR /opt/
-ENV HARNESS_VERSION 0.2.4
+ENV HARNESS_VERSION 0.2.5
 ENV COFFEESCRIPT_VERSION 1.9.3
 ENV WORKSPACE /home/harness/
 
